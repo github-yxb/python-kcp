@@ -112,7 +112,7 @@ def lkcp_send(kcp, data):
 
 def lkcp_update(kcp, current):
     cdef ikcpcb* ckcp = <ikcpcb*>get_pointer(<object>kcp, NULL)
-    cdef int32_t i_cur = current
+    cdef uint32_t i_cur = current
     ikcp_update(ckcp, i_cur)
 
 def lkcp_check(kcp, current):
